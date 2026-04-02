@@ -102,9 +102,18 @@ DELIMITER ;
 ```
 
 ### 2. Backend Configuration
+
+#### Step A: Connection String Setup
 1. Open `AuthSystem/backend/AuthSystem.API/appsettings.json`.
-2. Update the `ConnectionStrings:DefaultConnection` with your MySQL user and password.
-3. In the terminal:
+2. Locate the `ConnectionStrings` section and update it with your local MySQL credentials:
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "server=localhost;database=authdb;user=YOUR_USERNAME;password=YOUR_PASSWORD"
+   }
+   ```
+
+#### Step B: Run the API
+1. In the terminal:
    ```bash
    cd AuthSystem/backend/AuthSystem.API
    dotnet restore
